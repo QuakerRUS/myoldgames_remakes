@@ -1,0 +1,6 @@
+# Default for the rest of the repository. It must come first: later lines override earlier ones.
+* text=auto
+# The originals are stored byte-for-byte: no line-ending conversion, no diffs as text.
+archive/** -text -diff
+archive/**/*.md text eol=lf diff
+archive/**/src-utf8/** text eol=crlf diff
