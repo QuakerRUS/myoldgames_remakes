@@ -1,0 +1,2 @@
+// Application icon (the first icon resource is used by Explorer and by SDL for the window class).
+1 ICON "app.ico"
