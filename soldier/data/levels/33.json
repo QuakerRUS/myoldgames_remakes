@@ -1,0 +1,23 @@
+{
+  "number": 33,
+  "width": 20,
+  "height": 15,
+  "time_limit": 36,
+  "rows": [
+    "####################",
+    "#BB..B..BBBB..B..BX#",
+    "#BB.BB.BB..B..B....#",
+    "#BB.BB.BB..BBBBBBBB#",
+    "#.B.BB.BB..BBBBBBBB#",
+    "#.B..B..B..BBBBBBBB#",
+    "#B##################",
+    "#..................#",
+    "#.....############.#",
+    "#rrrrr.RRRRRRRRRR#.#",
+    "#rrrrr##########R#.#",
+    "#rrrrr##RRRRRRRRR#.#",
+    "#rrrrr##R#########.#",
+    "#rrrrr##RRRR....X#^#",
+    "####################"
+  ]
+}

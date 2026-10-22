@@ -1,0 +1,32 @@
+{
+  "format": "soldier-recording",
+  "version": 1,
+  "level": 47,
+  "player": "LISIY",
+  "source": "REC047.DAT",
+  "original": {"seed": 18615, "game_speed": 2000},
+  "result": {"status": "won", "tick": 338},
+  "commands": [
+    [0, "right"], [2, "right"], [4, "down"], [6, "down"], [8, "right"], [10, "right"], [12, "right"], [14, "up"],
+    [16, "up"], [18, "right"], [20, "right"], [22, "right"], [24, "left"], [26, "left"], [28, "left"], [30, "up"],
+    [32, "up"], [34, "up"], [36, "up"], [38, "right"], [40, "right"], [42, "left"], [44, "left"], [46, "down"],
+    [48, "down"], [50, "down"], [52, "down"], [54, "down"], [56, "down"], [58, "down"], [60, "down"], [62, "right"],
+    [64, "right"], [66, "left"], [68, "left"], [70, "up"], [72, "up"], [74, "up"], [76, "up"], [78, "up"],
+    [80, "up"], [82, "right"], [84, "right"], [86, "left"], [88, "left"], [90, "down"], [92, "down"], [94, "down"],
+    [96, "down"], [98, "right"], [100, "right"], [102, "left"], [104, "left"], [106, "up"], [108, "up"], [110, "right"],
+    [112, "right"], [114, "right"], [116, "right"], [118, "right"], [120, "right"], [122, "down"], [124, "down"], [126, "down"],
+    [128, "right"], [130, "right"], [132, "right"], [134, "right"], [136, "right"], [138, "right"], [140, "right"], [142, "up"],
+    [144, "up"], [146, "up"], [148, "up"], [150, "up"], [152, "up"], [154, "down"], [156, "down"], [158, "down"],
+    [160, "right"], [162, "right"], [164, "down"], [166, "down"], [168, "down"], [170, "down"], [172, "right"], [174, "right"],
+    [176, "up"], [178, "right"], [180, "right"], [182, "up"], [184, "up"], [186, "up"], [188, "right"], [190, "right"],
+    [192, "down"], [194, "left"], [196, "up"], [198, "left"], [200, "down"], [202, "down"], [204, "up"], [206, "up"],
+    [208, "right"], [210, "right"], [212, "up"], [214, "up"], [216, "left"], [218, "left"], [220, "left"], [222, "left"],
+    [224, "down"], [226, "down"], [228, "down"], [230, "down"], [232, "down"], [234, "right"], [236, "right"], [238, "right"],
+    [240, "right"], [242, "right"], [248, "down"], [250, "right"], [252, "up"], [254, "up"], [256, "up"], [258, "up"],
+    [260, "up"], [262, "down"], [264, "down"], [266, "down"], [268, "down"], [270, "left"], [272, "left"], [274, "left"],
+    [276, "left"], [278, "left"], [280, "left"], [282, "up"], [284, "up"], [286, "up"], [288, "up"], [290, "up"],
+    [292, "up"], [294, "up"], [296, "right"], [300, "right"], [302, "right"], [304, "right"], [306, "right"], [308, "right"],
+    [310, "right"], [316, "right"], [318, "down"], [320, "down"], [322, "down"], [324, "down"], [326, "down"], [328, "down"],
+    [330, "down"], [332, "right"], [336, "up"], [338, "right"]
+  ]
+}

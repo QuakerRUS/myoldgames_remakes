@@ -1,0 +1,28 @@
+{
+  "format": "soldier-recording",
+  "version": 1,
+  "level": 18,
+  "player": "LISIY",
+  "source": "REC018.DAT",
+  "original": {"seed": 27941, "game_speed": 5000},
+  "result": {"status": "won", "tick": 264},
+  "commands": [
+    [1, "down"], [3, "down"], [5, "left"], [7, "left"], [9, "up"], [11, "up"], [13, "left"], [15, "left"],
+    [17, "down"], [19, "down"], [21, "left"], [23, "left"], [25, "up"], [27, "up"], [29, "left"], [31, "left"],
+    [33, "down"], [35, "down"], [37, "left"], [39, "left"], [41, "up"], [43, "up"], [45, "left"], [47, "left"],
+    [49, "down"], [51, "down"], [53, "down"], [55, "down"], [57, "right"], [59, "right"], [61, "down"], [63, "right"],
+    [65, "right"], [67, "up"], [69, "right"], [71, "right"], [73, "down"], [75, "right"], [77, "right"], [79, "up"],
+    [81, "right"], [83, "right"], [85, "down"], [87, "right"], [89, "right"], [91, "down"], [93, "down"], [95, "left"],
+    [97, "left"], [99, "down"], [101, "down"], [103, "down"], [105, "down"], [107, "left"], [109, "left"], [111, "up"],
+    [113, "up"], [115, "up"], [117, "up"], [119, "left"], [121, "left"], [123, "down"], [125, "down"], [127, "down"],
+    [129, "down"], [131, "left"], [133, "left"], [135, "up"], [137, "up"], [139, "up"], [141, "up"], [143, "left"],
+    [145, "left"], [147, "down"], [149, "down"], [151, "down"], [153, "down"], [155, "left"], [157, "left"], [159, "down"],
+    [161, "down"], [163, "right"], [165, "right"], [167, "right"], [169, "right"], [171, "right"], [173, "right"], [175, "right"],
+    [177, "right"], [179, "right"], [181, "right"], [183, "right"], [185, "right"], [187, "right"], [189, "down"], [191, "down"],
+    [193, "left"], [195, "left"], [197, "left"], [199, "left"], [201, "left"], [203, "down"], [205, "down"], [207, "right"],
+    [209, "right"], [211, "right"], [213, "right"], [215, "down"], [217, "down"], [219, "left"], [221, "left"], [223, "left"],
+    [225, "left"], [227, "left"], [229, "left"], [231, "up"], [233, "up"], [235, "left"], [237, "up"], [239, "up"],
+    [241, "left"], [243, "left"], [245, "left"], [247, "left"], [249, "left"], [251, "down"], [253, "down"], [258, "right"],
+    [260, "down"], [262, "right"], [264, "down"]
+  ]
+}

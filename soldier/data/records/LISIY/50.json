@@ -1,0 +1,13 @@
+{
+  "format": "soldier-recording",
+  "version": 1,
+  "level": 50,
+  "player": "LISIY",
+  "source": "REC050.DAT",
+  "original": {"seed": 21636, "game_speed": 2000},
+  "result": {"status": "won", "tick": 20},
+  "commands": [
+    [2, "left"], [4, "left"], [6, "up"], [8, "up"], [10, "up"], [12, "up"], [14, "up"], [16, "up"],
+    [18, "right"], [20, "right"]
+  ]
+}

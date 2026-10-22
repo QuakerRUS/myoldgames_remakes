@@ -1,0 +1,25 @@
+{
+  "format": "soldier-recording",
+  "version": 1,
+  "level": 16,
+  "player": "LISIY",
+  "source": "REC016.DAT",
+  "original": {"seed": 21155, "game_speed": 5000},
+  "result": {"status": "won", "tick": 214},
+  "commands": [
+    [0, "left"], [2, "left"], [4, "left"], [6, "left"], [8, "left"], [10, "left"], [12, "left"], [14, "left"],
+    [16, "up"], [18, "up"], [20, "right"], [22, "right"], [24, "right"], [26, "right"], [28, "right"], [30, "right"],
+    [32, "right"], [34, "right"], [36, "up"], [38, "up"], [40, "up"], [42, "up"], [44, "left"], [46, "left"],
+    [48, "down"], [50, "down"], [52, "left"], [54, "left"], [56, "up"], [58, "up"], [60, "left"], [62, "left"],
+    [64, "down"], [66, "down"], [68, "left"], [70, "left"], [72, "up"], [74, "up"], [76, "up"], [78, "up"],
+    [80, "right"], [82, "right"], [84, "right"], [86, "right"], [88, "right"], [90, "right"], [92, "right"], [94, "up"],
+    [96, "up"], [98, "left"], [100, "left"], [102, "left"], [104, "left"], [106, "left"], [108, "left"], [110, "up"],
+    [112, "up"], [114, "right"], [116, "right"], [118, "right"], [120, "up"], [122, "up"], [124, "left"], [126, "left"],
+    [128, "left"], [130, "left"], [132, "up"], [134, "up"], [136, "up"], [138, "up"], [140, "up"], [142, "up"],
+    [144, "up"], [146, "right"], [148, "right"], [150, "right"], [152, "right"], [154, "up"], [156, "up"], [158, "up"],
+    [160, "right"], [162, "right"], [164, "right"], [166, "right"], [168, "up"], [170, "up"], [172, "up"], [174, "up"],
+    [176, "left"], [178, "left"], [180, "up"], [182, "up"], [184, "right"], [186, "right"], [188, "up"], [190, "up"],
+    [192, "left"], [194, "left"], [196, "left"], [198, "left"], [200, "left"], [202, "left"], [204, "down"], [206, "left"],
+    [208, "down"], [210, "down"], [212, "down"], [214, "right"]
+  ]
+}

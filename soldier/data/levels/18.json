@@ -1,0 +1,31 @@
+{
+  "number": 18,
+  "width": 16,
+  "height": 23,
+  "time_limit": 0,
+  "rows": [
+    "#BBBBBBBBBBBBBBB",
+    "#BBBBBBBBBBBBBBB",
+    "#...B...B...BvBB",
+    "#.B.B.B.B.B.B.BB",
+    "#.B...B...B...BB",
+    "#B##########BBBB",
+    "#...B...B...BBBB",
+    "#.#...B...B...BB",
+    "#############BBB",
+    "#.B...B...B...BB",
+    "#.B.B.B.B.B...BB",
+    "#.B.B.B.B.B.BBBB",
+    "#.B.B.B.B.B.BBBB",
+    "#...B...B...BBBB",
+    "#.BBBBBBBBBBBBBB",
+    "#..............#",
+    "##############.#",
+    "#......B..B....#",
+    "#BBB##.BB.BBBBB#",
+    "#...##..B.....BB",
+    "#.BB.X#.BBBBB.BB",
+    "#X.XXX#.......BB",
+    "##############BB"
+  ]
+}

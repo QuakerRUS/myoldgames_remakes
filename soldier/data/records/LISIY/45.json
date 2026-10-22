@@ -1,0 +1,15 @@
+{
+  "format": "soldier-recording",
+  "version": 1,
+  "level": 45,
+  "player": "LISIY",
+  "source": "REC045.DAT",
+  "original": {"seed": 23757, "game_speed": 2500},
+  "result": {"status": "won", "tick": 64},
+  "commands": [
+    [1, "right"], [4, "down"], [6, "down"], [8, "down"], [10, "down"], [12, "right"], [16, "right"], [18, "right"],
+    [20, "right"], [22, "right"], [24, "down"], [26, "down"], [28, "left"], [30, "left"], [32, "left"], [34, "left"],
+    [36, "left"], [38, "left"], [40, "left"], [42, "left"], [44, "down"], [46, "down"], [48, "right"], [50, "right"],
+    [52, "right"], [54, "right"], [56, "right"], [58, "right"], [60, "right"], [62, "right"], [64, "down"]
+  ]
+}

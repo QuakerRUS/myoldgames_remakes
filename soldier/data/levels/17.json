@@ -1,0 +1,19 @@
+{
+  "number": 17,
+  "width": 61,
+  "height": 11,
+  "time_limit": 0,
+  "rows": [
+    "BBBBBBBBBBBB###############################...#XBBBBBBBBBBBBB",
+    "BBBBBBBBBBBB#B.B.B.B.BBB.........BB..BB..BB...#BBBBBBBBBBBBBB",
+    "BBBXB...BBBBB.B.B.B.B.BB.......B.BB..BB..BB..B#BBBBBBBBBBBBBB",
+    "BBB.B.......#B.B.B.B.BBB.........BB........BBB#BBBBBBBBBBBBBB",
+    "BBB.B...BB..B.B.B.B.B.BB.......B.BB........BB.#BBBBBBBBBBBBBB",
+    "BBB.B...BB..#B.B.B.B.BBB.........BB.BBB..B....#.BBBB...BBBBBB",
+    "BBB.B...BB.BB.B.B.B.B.BB........BBB.BBB..B....B...B....B...BB",
+    "BB..B...BB.B#B.B.B.B.BBB....B....BB.BBB.......#..BBBB..B.^.BB",
+    "BBB.B......BB.B.B.B.B...B...B.BB..B...........#BBBBBB..B...BB",
+    "BBBBBBBBBBBB#B.B.B.B.BBB......BB..B....B.BBB.B#BBBBBBBBBBBBBB",
+    "BBBBBBBBBBBB#############################BBB###BBBBBBBBBBBBBB"
+  ]
+}
