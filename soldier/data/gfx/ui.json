@@ -1,0 +1,128 @@
+{
+ "image": "ui.png",
+ "frames": {
+  "frame9": {
+   "x": 0,
+   "y": 0,
+   "w": 48,
+   "h": 48
+  },
+  "inset9": {
+   "x": 49,
+   "y": 0,
+   "w": 24,
+   "h": 24
+  },
+  "button9": {
+   "x": 74,
+   "y": 0,
+   "w": 24,
+   "h": 24
+  },
+  "button9_hot": {
+   "x": 99,
+   "y": 0,
+   "w": 24,
+   "h": 24
+  },
+  "inv_slot": {
+   "x": 124,
+   "y": 0,
+   "w": 40,
+   "h": 40
+  },
+  "cursor_0": {
+   "x": 165,
+   "y": 0,
+   "w": 44,
+   "h": 44
+  },
+  "cursor_1": {
+   "x": 210,
+   "y": 0,
+   "w": 44,
+   "h": 44
+  },
+  "cursor_2": {
+   "x": 0,
+   "y": 49,
+   "w": 44,
+   "h": 44
+  },
+  "cursor_3": {
+   "x": 45,
+   "y": 49,
+   "w": 44,
+   "h": 44
+  },
+  "menu_arrow_0": {
+   "x": 90,
+   "y": 49,
+   "w": 16,
+   "h": 16
+  },
+  "menu_arrow_1": {
+   "x": 107,
+   "y": 49,
+   "w": 16,
+   "h": 16
+  },
+  "menu_arrow_2": {
+   "x": 124,
+   "y": 49,
+   "w": 16,
+   "h": 16
+  },
+  "menu_arrow_3": {
+   "x": 141,
+   "y": 49,
+   "w": 16,
+   "h": 16
+  },
+  "icon_timer": {
+   "x": 158,
+   "y": 49,
+   "w": 16,
+   "h": 16
+  },
+  "icon_level": {
+   "x": 175,
+   "y": 49,
+   "w": 16,
+   "h": 16
+  }
+ },
+ "animations": {
+  "cursor": {
+   "frames": [
+    {
+     "frame": "cursor_0",
+     "ms": 160
+    },
+    {
+     "frame": "cursor_1",
+     "ms": 90
+    },
+    {
+     "frame": "cursor_2",
+     "ms": 160
+    },
+    {
+     "frame": "cursor_3",
+     "ms": 90
+    }
+   ],
+   "loop": true
+  },
+  "menu_arrow": {
+   "frames": [
+    "menu_arrow_0",
+    "menu_arrow_1",
+    "menu_arrow_2",
+    "menu_arrow_3"
+   ],
+   "ms": 120,
+   "loop": true
+  }
+ }
+}

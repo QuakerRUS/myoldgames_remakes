@@ -1,0 +1,117 @@
+{
+ "image": "rabbit.png",
+ "frames": {
+  "rabbit_sit": {
+   "x": 0,
+   "y": 0,
+   "w": 24,
+   "h": 24
+  },
+  "rabbit_nose": {
+   "x": 25,
+   "y": 0,
+   "w": 24,
+   "h": 24
+  },
+  "rabbit_look": {
+   "x": 50,
+   "y": 0,
+   "w": 24,
+   "h": 24
+  },
+  "rabbit_ears": {
+   "x": 75,
+   "y": 0,
+   "w": 24,
+   "h": 24
+  },
+  "rabbit_hop1": {
+   "x": 100,
+   "y": 0,
+   "w": 24,
+   "h": 24
+  },
+  "rabbit_hop2": {
+   "x": 125,
+   "y": 0,
+   "w": 24,
+   "h": 24
+  }
+ },
+ "animations": {
+  "rabbit_idle": {
+   "frames": [
+    {
+     "frame": "rabbit_sit",
+     "ms": 700
+    },
+    {
+     "frame": "rabbit_nose",
+     "ms": 90
+    },
+    {
+     "frame": "rabbit_sit",
+     "ms": 90
+    },
+    {
+     "frame": "rabbit_nose",
+     "ms": 90
+    },
+    {
+     "frame": "rabbit_sit",
+     "ms": 600
+    },
+    {
+     "frame": "rabbit_ears",
+     "ms": 260
+    },
+    {
+     "frame": "rabbit_sit",
+     "ms": 500
+    },
+    {
+     "frame": "rabbit_look",
+     "ms": 400
+    },
+    {
+     "frame": "rabbit_sit",
+     "ms": 300
+    },
+    {
+     "frame": "rabbit_hop1",
+     "ms": 70
+    },
+    {
+     "frame": "rabbit_hop2",
+     "ms": 110
+    },
+    {
+     "frame": "rabbit_hop1",
+     "ms": 70
+    }
+   ],
+   "loop": true
+  },
+  "rabbit_hop": {
+   "frames": [
+    {
+     "frame": "rabbit_hop1",
+     "ms": 70
+    },
+    {
+     "frame": "rabbit_hop2",
+     "ms": 110
+    },
+    {
+     "frame": "rabbit_hop1",
+     "ms": 70
+    },
+    {
+     "frame": "rabbit_sit",
+     "ms": 120
+    }
+   ],
+   "loop": false
+  }
+ }
+}

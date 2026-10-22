@@ -1,0 +1,905 @@
+{
+ "image": "player.png",
+ "frames": {
+  "idle_d_0": {
+   "x": 0,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "idle_d_1": {
+   "x": 33,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "walk_d_0": {
+   "x": 66,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "walk_d_1": {
+   "x": 99,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "walk_d_2": {
+   "x": 132,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "walk_d_3": {
+   "x": 165,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "push_d_0": {
+   "x": 198,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "push_d_1": {
+   "x": 231,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "turn_d": {
+   "x": 264,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "idle_u_0": {
+   "x": 297,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "idle_u_1": {
+   "x": 330,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "walk_u_0": {
+   "x": 363,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "walk_u_1": {
+   "x": 396,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "walk_u_2": {
+   "x": 429,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "walk_u_3": {
+   "x": 462,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "push_u_0": {
+   "x": 495,
+   "y": 0,
+   "w": 32,
+   "h": 32
+  },
+  "push_u_1": {
+   "x": 0,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "turn_u": {
+   "x": 33,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "idle_r_0": {
+   "x": 66,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "idle_r_1": {
+   "x": 99,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "walk_r_0": {
+   "x": 132,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "walk_r_1": {
+   "x": 165,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "walk_r_2": {
+   "x": 198,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "walk_r_3": {
+   "x": 231,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "push_r_0": {
+   "x": 264,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "push_r_1": {
+   "x": 297,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "turn_r": {
+   "x": 330,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "idle_l_0": {
+   "x": 363,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "idle_l_1": {
+   "x": 396,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "walk_l_0": {
+   "x": 429,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "walk_l_1": {
+   "x": 462,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "walk_l_2": {
+   "x": 495,
+   "y": 33,
+   "w": 32,
+   "h": 32
+  },
+  "walk_l_3": {
+   "x": 0,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "push_l_0": {
+   "x": 33,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "push_l_1": {
+   "x": 66,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "turn_l": {
+   "x": 99,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_giveup_0": {
+   "x": 132,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_giveup_1": {
+   "x": 165,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_giveup_2": {
+   "x": 198,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_giveup_3": {
+   "x": 231,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_giveup_4": {
+   "x": 264,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_giveup_5": {
+   "x": 297,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_giveup_6": {
+   "x": 330,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_giveup_7": {
+   "x": 363,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_timeout_0": {
+   "x": 396,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_timeout_1": {
+   "x": 429,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_timeout_2": {
+   "x": 462,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_timeout_3": {
+   "x": 495,
+   "y": 66,
+   "w": 32,
+   "h": 32
+  },
+  "die_timeout_4": {
+   "x": 0,
+   "y": 99,
+   "w": 32,
+   "h": 32
+  },
+  "die_timeout_5": {
+   "x": 33,
+   "y": 99,
+   "w": 32,
+   "h": 32
+  },
+  "die_guillotine_0": {
+   "x": 66,
+   "y": 99,
+   "w": 32,
+   "h": 48,
+   "pivot_x": 0,
+   "pivot_y": 16
+  },
+  "die_guillotine_1": {
+   "x": 99,
+   "y": 99,
+   "w": 32,
+   "h": 48,
+   "pivot_x": 0,
+   "pivot_y": 16
+  },
+  "die_guillotine_2": {
+   "x": 132,
+   "y": 99,
+   "w": 32,
+   "h": 48,
+   "pivot_x": 0,
+   "pivot_y": 16
+  },
+  "die_guillotine_3": {
+   "x": 165,
+   "y": 99,
+   "w": 32,
+   "h": 48,
+   "pivot_x": 0,
+   "pivot_y": 16
+  },
+  "die_guillotine_4": {
+   "x": 198,
+   "y": 99,
+   "w": 32,
+   "h": 48,
+   "pivot_x": 0,
+   "pivot_y": 16
+  },
+  "die_guillotine_5": {
+   "x": 231,
+   "y": 99,
+   "w": 32,
+   "h": 48,
+   "pivot_x": 0,
+   "pivot_y": 16
+  },
+  "die_guillotine_6": {
+   "x": 264,
+   "y": 99,
+   "w": 32,
+   "h": 48,
+   "pivot_x": 0,
+   "pivot_y": 16
+  },
+  "die_drown_0": {
+   "x": 297,
+   "y": 99,
+   "w": 32,
+   "h": 32
+  },
+  "die_drown_1": {
+   "x": 330,
+   "y": 99,
+   "w": 32,
+   "h": 32
+  },
+  "die_drown_2": {
+   "x": 363,
+   "y": 99,
+   "w": 32,
+   "h": 32
+  },
+  "die_drown_3": {
+   "x": 396,
+   "y": 99,
+   "w": 32,
+   "h": 32
+  },
+  "die_drown_4": {
+   "x": 429,
+   "y": 99,
+   "w": 32,
+   "h": 32
+  },
+  "die_drown_5": {
+   "x": 462,
+   "y": 99,
+   "w": 32,
+   "h": 32
+  },
+  "die_drown_6": {
+   "x": 495,
+   "y": 99,
+   "w": 32,
+   "h": 32
+  },
+  "die_drown_7": {
+   "x": 0,
+   "y": 148,
+   "w": 32,
+   "h": 32
+  }
+ },
+ "animations": {
+  "idle_d": {
+   "frames": [
+    {
+     "frame": "idle_d_0",
+     "ms": 900
+    },
+    {
+     "frame": "idle_d_1",
+     "ms": 500
+    }
+   ],
+   "loop": true
+  },
+  "walk_d": {
+   "frames": [
+    "walk_d_0",
+    "walk_d_1",
+    "walk_d_2",
+    "walk_d_3"
+   ],
+   "ms": 125,
+   "loop": true
+  },
+  "push_d": {
+   "frames": [
+    "push_d_0",
+    "push_d_1"
+   ],
+   "ms": 200,
+   "loop": true
+  },
+  "turn_d": {
+   "frames": [
+    "turn_d",
+    "idle_d_0"
+   ],
+   "ms": 70,
+   "loop": false
+  },
+  "idle_u": {
+   "frames": [
+    {
+     "frame": "idle_u_0",
+     "ms": 900
+    },
+    {
+     "frame": "idle_u_1",
+     "ms": 500
+    }
+   ],
+   "loop": true
+  },
+  "walk_u": {
+   "frames": [
+    "walk_u_0",
+    "walk_u_1",
+    "walk_u_2",
+    "walk_u_3"
+   ],
+   "ms": 125,
+   "loop": true
+  },
+  "push_u": {
+   "frames": [
+    "push_u_0",
+    "push_u_1"
+   ],
+   "ms": 200,
+   "loop": true
+  },
+  "turn_u": {
+   "frames": [
+    "turn_u",
+    "idle_u_0"
+   ],
+   "ms": 70,
+   "loop": false
+  },
+  "idle_r": {
+   "frames": [
+    {
+     "frame": "idle_r_0",
+     "ms": 900
+    },
+    {
+     "frame": "idle_r_1",
+     "ms": 500
+    }
+   ],
+   "loop": true
+  },
+  "walk_r": {
+   "frames": [
+    "walk_r_0",
+    "walk_r_1",
+    "walk_r_2",
+    "walk_r_3"
+   ],
+   "ms": 125,
+   "loop": true
+  },
+  "push_r": {
+   "frames": [
+    "push_r_0",
+    "push_r_1"
+   ],
+   "ms": 200,
+   "loop": true
+  },
+  "turn_r": {
+   "frames": [
+    "turn_r",
+    "idle_r_0"
+   ],
+   "ms": 70,
+   "loop": false
+  },
+  "idle_l": {
+   "frames": [
+    {
+     "frame": "idle_l_0",
+     "ms": 900
+    },
+    {
+     "frame": "idle_l_1",
+     "ms": 500
+    }
+   ],
+   "loop": true
+  },
+  "walk_l": {
+   "frames": [
+    "walk_l_0",
+    "walk_l_1",
+    "walk_l_2",
+    "walk_l_3"
+   ],
+   "ms": 125,
+   "loop": true
+  },
+  "push_l": {
+   "frames": [
+    "push_l_0",
+    "push_l_1"
+   ],
+   "ms": 200,
+   "loop": true
+  },
+  "turn_l": {
+   "frames": [
+    "turn_l",
+    "idle_l_0"
+   ],
+   "ms": 70,
+   "loop": false
+  },
+  "die_giveup": {
+   "frames": [
+    {
+     "frame": "die_giveup_0",
+     "ms": 60
+    },
+    {
+     "frame": "die_giveup_1",
+     "ms": 60
+    },
+    {
+     "frame": "die_giveup_2",
+     "ms": 70
+    },
+    {
+     "frame": "die_giveup_3",
+     "ms": 80
+    },
+    {
+     "frame": "die_giveup_4",
+     "ms": 110
+    },
+    {
+     "frame": "die_giveup_5",
+     "ms": 130
+    },
+    {
+     "frame": "die_giveup_6",
+     "ms": 150
+    },
+    {
+     "frame": "die_giveup_7",
+     "ms": 400
+    }
+   ],
+   "loop": false
+  },
+  "die_timeout": {
+   "frames": [
+    {
+     "frame": "die_timeout_0",
+     "ms": 200
+    },
+    {
+     "frame": "die_timeout_1",
+     "ms": 160
+    },
+    {
+     "frame": "die_timeout_2",
+     "ms": 220
+    },
+    {
+     "frame": "die_timeout_3",
+     "ms": 120
+    },
+    {
+     "frame": "die_timeout_4",
+     "ms": 400
+    },
+    {
+     "frame": "die_timeout_5",
+     "ms": 600
+    }
+   ],
+   "loop": false
+  },
+  "die_guillotine": {
+   "frames": [
+    {
+     "frame": "die_guillotine_0",
+     "ms": 40
+    },
+    {
+     "frame": "die_guillotine_1",
+     "ms": 40
+    },
+    {
+     "frame": "die_guillotine_2",
+     "ms": 40
+    },
+    {
+     "frame": "die_guillotine_3",
+     "ms": 90
+    },
+    {
+     "frame": "die_guillotine_4",
+     "ms": 110
+    },
+    {
+     "frame": "die_guillotine_5",
+     "ms": 140
+    },
+    {
+     "frame": "die_guillotine_6",
+     "ms": 600
+    }
+   ],
+   "loop": false
+  },
+  "die_drown": {
+   "frames": [
+    {
+     "frame": "die_drown_0",
+     "ms": 90
+    },
+    {
+     "frame": "die_drown_1",
+     "ms": 110
+    },
+    {
+     "frame": "die_drown_2",
+     "ms": 140
+    },
+    {
+     "frame": "die_drown_3",
+     "ms": 160
+    },
+    {
+     "frame": "die_drown_4",
+     "ms": 160
+    },
+    {
+     "frame": "die_drown_5",
+     "ms": 180
+    },
+    {
+     "frame": "die_drown_6",
+     "ms": 200
+    },
+    {
+     "frame": "die_drown_7",
+     "ms": 400
+    }
+   ],
+   "loop": false
+  },
+  "death_7": {
+   "frames": [
+    {
+     "frame": "die_giveup_0",
+     "ms": 60
+    },
+    {
+     "frame": "die_giveup_1",
+     "ms": 60
+    },
+    {
+     "frame": "die_giveup_2",
+     "ms": 70
+    },
+    {
+     "frame": "die_giveup_3",
+     "ms": 80
+    },
+    {
+     "frame": "die_giveup_4",
+     "ms": 110
+    },
+    {
+     "frame": "die_giveup_5",
+     "ms": 130
+    },
+    {
+     "frame": "die_giveup_6",
+     "ms": 150
+    },
+    {
+     "frame": "die_giveup_7",
+     "ms": 400
+    }
+   ],
+   "loop": false
+  },
+  "death_47": {
+   "frames": [
+    {
+     "frame": "die_timeout_0",
+     "ms": 200
+    },
+    {
+     "frame": "die_timeout_1",
+     "ms": 160
+    },
+    {
+     "frame": "die_timeout_2",
+     "ms": 220
+    },
+    {
+     "frame": "die_timeout_3",
+     "ms": 120
+    },
+    {
+     "frame": "die_timeout_4",
+     "ms": 400
+    },
+    {
+     "frame": "die_timeout_5",
+     "ms": 600
+    }
+   ],
+   "loop": false
+  },
+  "death_53": {
+   "frames": [
+    {
+     "frame": "die_guillotine_0",
+     "ms": 40
+    },
+    {
+     "frame": "die_guillotine_1",
+     "ms": 40
+    },
+    {
+     "frame": "die_guillotine_2",
+     "ms": 40
+    },
+    {
+     "frame": "die_guillotine_3",
+     "ms": 90
+    },
+    {
+     "frame": "die_guillotine_4",
+     "ms": 110
+    },
+    {
+     "frame": "die_guillotine_5",
+     "ms": 140
+    },
+    {
+     "frame": "die_guillotine_6",
+     "ms": 600
+    }
+   ],
+   "loop": false
+  },
+  "death_55": {
+   "frames": [
+    {
+     "frame": "die_drown_0",
+     "ms": 90
+    },
+    {
+     "frame": "die_drown_1",
+     "ms": 110
+    },
+    {
+     "frame": "die_drown_2",
+     "ms": 140
+    },
+    {
+     "frame": "die_drown_3",
+     "ms": 160
+    },
+    {
+     "frame": "die_drown_4",
+     "ms": 160
+    },
+    {
+     "frame": "die_drown_5",
+     "ms": 180
+    },
+    {
+     "frame": "die_drown_6",
+     "ms": 200
+    },
+    {
+     "frame": "die_drown_7",
+     "ms": 400
+    }
+   ],
+   "loop": false
+  },
+  "death_61": {
+   "frames": [
+    {
+     "frame": "die_giveup_0",
+     "ms": 60
+    },
+    {
+     "frame": "die_giveup_1",
+     "ms": 60
+    },
+    {
+     "frame": "die_giveup_2",
+     "ms": 70
+    },
+    {
+     "frame": "die_giveup_3",
+     "ms": 80
+    },
+    {
+     "frame": "die_giveup_4",
+     "ms": 110
+    },
+    {
+     "frame": "die_giveup_5",
+     "ms": 130
+    },
+    {
+     "frame": "die_giveup_6",
+     "ms": 150
+    },
+    {
+     "frame": "die_giveup_7",
+     "ms": 400
+    }
+   ],
+   "loop": false
+  },
+  "death_62": {
+   "frames": [
+    {
+     "frame": "die_timeout_0",
+     "ms": 200
+    },
+    {
+     "frame": "die_timeout_1",
+     "ms": 160
+    },
+    {
+     "frame": "die_timeout_2",
+     "ms": 220
+    },
+    {
+     "frame": "die_timeout_3",
+     "ms": 120
+    },
+    {
+     "frame": "die_timeout_4",
+     "ms": 400
+    },
+    {
+     "frame": "die_timeout_5",
+     "ms": 600
+    }
+   ],
+   "loop": false
+  }
+ }
+}
