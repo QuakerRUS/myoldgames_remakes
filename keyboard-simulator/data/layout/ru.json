@@ -1,0 +1,90 @@
+{
+  "format": "kbsim-layout",
+  "version": 1,
+  "name": "ЙЦУКЕН",
+  "language": "ru",
+  "fingers": [
+    {"id": "left_pinky", "hand": "left", "legend": 5, "original_colour": "green"},
+    {"id": "left_ring", "hand": "left", "legend": 4, "original_colour": "yellow"},
+    {"id": "left_middle", "hand": "left", "legend": 3, "original_colour": "lavender"},
+    {"id": "left_index", "hand": "left", "legend": 2, "original_colour": "pink"},
+    {"id": "thumbs", "hand": "both", "legend": 1, "original_colour": "grey"},
+    {"id": "right_index", "hand": "right", "legend": 2, "original_colour": "cyan"},
+    {"id": "right_middle", "hand": "right", "legend": 3, "original_colour": "green"},
+    {"id": "right_ring", "hand": "right", "legend": 4, "original_colour": "yellow"},
+    {"id": "right_pinky", "hand": "right", "legend": 5, "original_colour": "lavender"}
+  ],
+  "rows": [
+    [
+      {"code": "Backquote", "normal": "ё", "shift": "Ё", "label": "Ё", "finger": "left_pinky", "shift_with": "ShiftRight"},
+      {"code": "Digit1", "normal": "1", "shift": "!", "finger": "left_pinky", "shift_with": "ShiftRight"},
+      {"code": "Digit2", "normal": "2", "shift": "\"", "finger": "left_ring", "shift_with": "ShiftRight"},
+      {"code": "Digit3", "normal": "3", "shift": "№", "finger": "left_middle", "shift_with": "ShiftRight"},
+      {"code": "Digit4", "normal": "4", "shift": ";", "finger": "left_index", "shift_with": "ShiftRight"},
+      {"code": "Digit5", "normal": "5", "shift": "%", "finger": "left_index", "shift_with": "ShiftRight"},
+      {"code": "Digit6", "normal": "6", "shift": ":", "finger": "left_index", "shift_with": "ShiftRight"},
+      {"code": "Digit7", "normal": "7", "shift": "?", "finger": "right_index", "shift_with": "ShiftLeft"},
+      {"code": "Digit8", "normal": "8", "shift": "*", "finger": "right_middle", "shift_with": "ShiftLeft"},
+      {"code": "Digit9", "normal": "9", "shift": "(", "finger": "right_ring", "shift_with": "ShiftLeft"},
+      {"code": "Digit0", "normal": "0", "shift": ")", "finger": "right_pinky", "shift_with": "ShiftLeft"},
+      {"code": "Minus", "normal": "-", "shift": "_", "finger": "right_pinky", "shift_with": "ShiftLeft"},
+      {"code": "Equal", "normal": "=", "shift": "+", "finger": "right_pinky", "shift_with": "ShiftLeft"},
+      {"code": "Backspace", "label": "Backspace", "width": 2, "finger": "right_pinky"}
+    ],
+    [
+      {"code": "Tab", "label": "Tab", "width": 1.5, "finger": "left_pinky"},
+      {"code": "KeyQ", "normal": "й", "shift": "Й", "label": "Й", "finger": "left_pinky", "shift_with": "ShiftRight"},
+      {"code": "KeyW", "normal": "ц", "shift": "Ц", "label": "Ц", "finger": "left_ring", "shift_with": "ShiftRight"},
+      {"code": "KeyE", "normal": "у", "shift": "У", "label": "У", "finger": "left_middle", "shift_with": "ShiftRight"},
+      {"code": "KeyR", "normal": "к", "shift": "К", "label": "К", "finger": "left_index", "shift_with": "ShiftRight"},
+      {"code": "KeyT", "normal": "е", "shift": "Е", "label": "Е", "finger": "left_index", "shift_with": "ShiftRight"},
+      {"code": "KeyY", "normal": "н", "shift": "Н", "label": "Н", "finger": "right_index", "shift_with": "ShiftLeft"},
+      {"code": "KeyU", "normal": "г", "shift": "Г", "label": "Г", "finger": "right_index", "shift_with": "ShiftLeft"},
+      {"code": "KeyI", "normal": "ш", "shift": "Ш", "label": "Ш", "finger": "right_middle", "shift_with": "ShiftLeft"},
+      {"code": "KeyO", "normal": "щ", "shift": "Щ", "label": "Щ", "finger": "right_ring", "shift_with": "ShiftLeft"},
+      {"code": "KeyP", "normal": "з", "shift": "З", "label": "З", "finger": "right_pinky", "shift_with": "ShiftLeft"},
+      {"code": "BracketLeft", "normal": "х", "shift": "Х", "label": "Х", "finger": "right_pinky", "shift_with": "ShiftLeft"},
+      {"code": "BracketRight", "normal": "ъ", "shift": "Ъ", "label": "Ъ", "finger": "right_pinky", "shift_with": "ShiftLeft"},
+      {"code": "Backslash", "normal": "\\", "shift": "/", "width": 1.5, "finger": "right_pinky", "shift_with": "ShiftLeft"}
+    ],
+    [
+      {"code": "CapsLock", "label": "Caps Lock", "width": 1.75, "finger": "left_pinky"},
+      {"code": "KeyA", "normal": "ф", "shift": "Ф", "label": "Ф", "finger": "left_pinky", "home": true, "shift_with": "ShiftRight"},
+      {"code": "KeyS", "normal": "ы", "shift": "Ы", "label": "Ы", "finger": "left_ring", "home": true, "shift_with": "ShiftRight"},
+      {"code": "KeyD", "normal": "в", "shift": "В", "label": "В", "finger": "left_middle", "home": true, "shift_with": "ShiftRight"},
+      {"code": "KeyF", "normal": "а", "shift": "А", "label": "А", "finger": "left_index", "home": true, "bump": true, "shift_with": "ShiftRight"},
+      {"code": "KeyG", "normal": "п", "shift": "П", "label": "П", "finger": "left_index", "shift_with": "ShiftRight"},
+      {"code": "KeyH", "normal": "р", "shift": "Р", "label": "Р", "finger": "right_index", "shift_with": "ShiftLeft"},
+      {"code": "KeyJ", "normal": "о", "shift": "О", "label": "О", "finger": "right_index", "home": true, "bump": true, "shift_with": "ShiftLeft"},
+      {"code": "KeyK", "normal": "л", "shift": "Л", "label": "Л", "finger": "right_middle", "home": true, "shift_with": "ShiftLeft"},
+      {"code": "KeyL", "normal": "д", "shift": "Д", "label": "Д", "finger": "right_ring", "home": true, "shift_with": "ShiftLeft"},
+      {"code": "Semicolon", "normal": "ж", "shift": "Ж", "label": "Ж", "finger": "right_pinky", "home": true, "shift_with": "ShiftLeft"},
+      {"code": "Quote", "normal": "э", "shift": "Э", "label": "Э", "finger": "right_pinky", "shift_with": "ShiftLeft"},
+      {"code": "Enter", "label": "Enter", "width": 2.25, "finger": "right_pinky"}
+    ],
+    [
+      {"code": "ShiftLeft", "label": "Shift", "width": 2.25, "finger": "left_pinky"},
+      {"code": "KeyZ", "normal": "я", "shift": "Я", "label": "Я", "finger": "left_pinky", "shift_with": "ShiftRight"},
+      {"code": "KeyX", "normal": "ч", "shift": "Ч", "label": "Ч", "finger": "left_ring", "shift_with": "ShiftRight"},
+      {"code": "KeyC", "normal": "с", "shift": "С", "label": "С", "finger": "left_middle", "shift_with": "ShiftRight"},
+      {"code": "KeyV", "normal": "м", "shift": "М", "label": "М", "finger": "left_index", "shift_with": "ShiftRight"},
+      {"code": "KeyB", "normal": "и", "shift": "И", "label": "И", "finger": "left_index", "shift_with": "ShiftRight"},
+      {"code": "KeyN", "normal": "т", "shift": "Т", "label": "Т", "finger": "right_index", "shift_with": "ShiftLeft"},
+      {"code": "KeyM", "normal": "ь", "shift": "Ь", "label": "Ь", "finger": "right_index", "shift_with": "ShiftLeft"},
+      {"code": "Comma", "normal": "б", "shift": "Б", "label": "Б", "finger": "right_middle", "shift_with": "ShiftLeft"},
+      {"code": "Period", "normal": "ю", "shift": "Ю", "label": "Ю", "finger": "right_ring", "shift_with": "ShiftLeft"},
+      {"code": "Slash", "normal": ".", "shift": ",", "finger": "right_pinky", "shift_with": "ShiftLeft"},
+      {"code": "ShiftRight", "label": "Shift", "width": 2.75, "finger": "right_pinky"}
+    ],
+    [
+      {"code": "ControlLeft", "label": "Ctrl", "width": 1.25, "finger": "left_pinky"},
+      {"code": "MetaLeft", "label": "Win", "width": 1.25, "finger": "left_pinky"},
+      {"code": "AltLeft", "label": "Alt", "width": 1.25, "finger": "thumbs"},
+      {"code": "Space", "normal": " ", "label": "", "width": 6.25, "finger": "thumbs"},
+      {"code": "AltRight", "label": "Alt", "width": 1.25, "finger": "thumbs"},
+      {"code": "MetaRight", "label": "Win", "width": 1.25, "finger": "right_pinky"},
+      {"code": "ContextMenu", "label": "Menu", "width": 1.25, "finger": "right_pinky"},
+      {"code": "ControlRight", "label": "Ctrl", "width": 1.25, "finger": "right_pinky"}
+    ]
+  ]
+}
