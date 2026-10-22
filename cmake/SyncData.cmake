@@ -1,0 +1,60 @@
+# Script mode (cmake -P): mirrors a program's data folder.
+#   cmake -DVS_SYNC_CONFIG=<file> -DVS_SYNC_DEST=<dest dir> -P SyncData.cmake
+# <file> (written by vs_add_game_data at configure time) sets VS_SYNC_SOURCES to a list of
+# "<src_dir>|<subdir>" entries ("." = the destination itself). Files that differ are copied
+# (copy_if_different keeps unchanged files' timestamps); files and empty folders in the
+# destination that no longer exist in any source are removed, so a renamed or deleted data
+# file does not linger in bin/<Config>/<folder>/data.
+cmake_minimum_required(VERSION 3.28)
+
+if(NOT VS_SYNC_CONFIG OR NOT VS_SYNC_DEST)
+  message(FATAL_ERROR "SyncData.cmake: VS_SYNC_CONFIG and VS_SYNC_DEST are required")
+endif()
+include("${VS_SYNC_CONFIG}")
+
+set(expected "")
+foreach(entry IN LISTS VS_SYNC_SOURCES)
+  string(REPLACE "|" ";" pair "${entry}")
+  list(GET pair 0 src)
+  list(GET pair 1 sub)
+  if(sub STREQUAL ".")
+    set(prefix "")
+  else()
+    set(prefix "${sub}/")
+  endif()
+  if(NOT IS_DIRECTORY "${src}")
+    message(FATAL_ERROR "SyncData.cmake: source folder ${src} does not exist")
+  endif()
+  file(GLOB_RECURSE files LIST_DIRECTORIES false RELATIVE "${src}" "${src}/*")
+  foreach(f IN LISTS files)
+    list(APPEND expected "${prefix}${f}")
+    get_filename_component(dir "${VS_SYNC_DEST}/${prefix}${f}" DIRECTORY)
+    if(NOT IS_DIRECTORY "${dir}")
+      file(MAKE_DIRECTORY "${dir}")
+    endif()
+    file(COPY_FILE "${src}/${f}" "${VS_SYNC_DEST}/${prefix}${f}" ONLY_IF_DIFFERENT INPUT_MAY_BE_RECENT)
+  endforeach()
+endforeach()
+
+if(IS_DIRECTORY "${VS_SYNC_DEST}")
+  file(GLOB_RECURSE present LIST_DIRECTORIES false RELATIVE "${VS_SYNC_DEST}" "${VS_SYNC_DEST}/*")
+  foreach(f IN LISTS present)
+    list(FIND expected "${f}" idx)
+    if(idx EQUAL -1)
+      message(STATUS "stale data file removed: ${f}")
+      file(REMOVE "${VS_SYNC_DEST}/${f}")
+    endif()
+  endforeach()
+  # Remove folders left empty (deepest first).
+  file(GLOB_RECURSE dirs LIST_DIRECTORIES true "${VS_SYNC_DEST}/*")
+  list(SORT dirs)
+  list(REVERSE dirs)
+  foreach(d IN LISTS dirs)
+    if(IS_DIRECTORY "${d}")
+      file(GLOB content "${d}/*")
+      if(NOT content)
+        file(REMOVE_RECURSE "${d}")
+      endif()
+    endif()
+  endforeach()
+endif()

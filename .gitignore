@@ -1,5 +1,7 @@
 build/
 out/
+dist/
 .vs/
 *.user
 __pycache__/
+.venv/
