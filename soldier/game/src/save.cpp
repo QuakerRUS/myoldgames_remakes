@@ -1,6 +1,8 @@
 #include "save.hpp"
 
 #include <algorithm>
+#include <cmath>
+#include <iterator>
 #include <cstdio>
 #include <ctime>
 #include <map>
@@ -23,8 +25,18 @@ double Settings::tick_seconds() const {
 }
 
 std::string Settings::speed_label() const {
-    static const char* labels[] = {"x0.5", "x0.75", "x1", "x1.5", "x2"};
-    return labels[std::clamp(speed, 0, 4)];
+    static const char* labels[] = {"x0.5", "x0.75", "x1", "x1.5", "x2", "x3", "x4"};
+    static_assert(std::size(labels) == kSpeedSteps.size());
+    return labels[std::clamp(speed, 0, static_cast<int>(kSpeedSteps.size()) - 1)];
+}
+
+int nearest_speed_step(double x) {
+    int best = kDefaultSpeed;
+    for (int i = 0; i < static_cast<int>(kSpeedSteps.size()); ++i)
+        if (std::abs(kSpeedSteps[static_cast<std::size_t>(i)] - x) <
+            std::abs(kSpeedSteps[static_cast<std::size_t>(best)] - x))
+            best = i;
+    return best;
 }
 
 int recording_ticks(const soldier::Recording& rec) {
@@ -102,6 +114,24 @@ int get_int(const json& o, const char* key, int def) {
     if (it == o.end() || !it->is_number_integer()) return def;
     const long long v = it->get<long long>();
     return static_cast<int>(std::clamp<long long>(v, -1000000, 1000000));
+}
+
+double get_double(const json& o, const char* key, double def) {
+    if (!o.is_object()) return def;
+    const auto it = o.find(key);
+    if (it == o.end() || !it->is_number()) return def;
+    const double v = it->get<double>();
+    return std::isfinite(v) ? v : def;
+}
+
+// GAME SPEED: the multiplier ("game_speed_x"); older saves kept an index ("game_speed") into
+// the steps x0.5 .. x2 of a 500 ms tick, i.e. half the present multipliers.
+int load_speed(const json& st) {
+    if (st.is_object() && st.contains("game_speed_x")) return nearest_speed_step(get_double(st, "game_speed_x", 1.0));
+    static constexpr std::array<double, 5> kOldSteps{0.5, 0.75, 1.0, 1.5, 2.0};
+    const int old = get_int(st, "game_speed", -1);
+    if (old < 0 || old >= static_cast<int>(kOldSteps.size())) return kDefaultSpeed;
+    return nearest_speed_step(kOldSteps[static_cast<std::size_t>(old)] / 2.0);
 }
 
 bool get_bool(const json& o, const char* key, bool def) {
@@ -321,7 +351,7 @@ void SaveSystem::load() {
     }
     try {
         const json& st = get_field(*j, "settings");
-        settings.speed = std::clamp(get_int(st, "game_speed", kDefaultSpeed), 0, static_cast<int>(kSpeedSteps.size()) - 1);
+        settings.speed = load_speed(st);
         settings.sound = std::clamp(get_int(st, "sound", 8), 0, 10);
         settings.music = std::clamp(get_int(st, "music", 6), 0, 10);
         settings.fullscreen = get_bool(st, "fullscreen", false);
@@ -352,7 +382,8 @@ void SaveSystem::save() const {
     json j;
     j["format"] = "soldier-save";
     j["version"] = 1;
-    j["settings"] = {{"game_speed", settings.speed},
+    j["settings"] = {{"game_speed_x", kSpeedSteps[static_cast<std::size_t>(
+                                          std::clamp(settings.speed, 0, static_cast<int>(kSpeedSteps.size()) - 1))]},
                      {"sound", settings.sound},
                      {"music", settings.music},
                      {"fullscreen", settings.fullscreen},

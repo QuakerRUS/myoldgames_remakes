@@ -11,7 +11,7 @@ originals is in [`docs/originals-review.md`](../originals-review.md).
 ## Goal
 
 Remake three old projects for Windows and keep them, together with the originals,
-in one private repository `QuakerRUS/remakes`.
+in one private repository `QuakerRUS/myoldgames_remakes`.
 
 Guiding principle: **the presentation is far better than the original, while the
 functionality and the levels keep their original content.** Every caption and logo that
@@ -176,8 +176,10 @@ tests (doctest).
 - The default pace is the original's "real second": tick 250 ms, step 0.5 s.
   The timer shows the original numbers (300, 120, 36, 15) and, as in the original,
   decreases by one every 4 ticks — at ×1 that is 1 real second.
-- Game speed is the GAME SPEED setting in OPTIONS: 5 steps ×0.5, ×0.75, **×1 (default,
-  tick 250 ms)**, ×1.5, ×2 (tick 500 … 125 ms). Only the tick length changes; all logic and
+- Game speed is the GAME SPEED setting in OPTIONS: 7 steps ×0.5, ×0.75, **×1 (default,
+  tick 250 ms)**, ×1.5, ×2, ×3, ×4 (tick 500 … 62.5 ms). `save.json` keeps the multiplier
+  (`game_speed_x`); an older save's step index (`game_speed`, steps of a 500 ms tick) is
+  converted to the same pace. Only the tick length changes; all logic and
   the timer run in ticks, so the timer numbers do not depend on the speed (×1 is the original pace),
   and neither do the recordings.
 - Bugs of the original are fixed (none of them affects the 51 LISIY demos):

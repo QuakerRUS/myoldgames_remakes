@@ -17,10 +17,14 @@ inline constexpr int kSlotCount = 10;
 inline constexpr int kLevelCount = 51;
 inline constexpr int kNameLength = 8;
 
-// GAME SPEED steps; x1 (index 2) = 250 ms per tick, the pace of the original.
-inline constexpr std::array<double, 5> kSpeedSteps{0.5, 0.75, 1.0, 1.5, 2.0};
+// GAME SPEED steps; x1 (index 2) = 250 ms per tick, the pace of the original; x4 = 62.5 ms.
+// save.json stores the multiplier ("game_speed_x"), not the index, so the steps may change.
+inline constexpr std::array<double, 7> kSpeedSteps{0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0};
 inline constexpr int kDefaultSpeed = 2;
 inline constexpr double kBaseTickSeconds = 0.25;
+
+// The index of the step nearest to the multiplier `x`.
+int nearest_speed_step(double x);
 
 struct Settings {
     int speed = kDefaultSpeed;  // index into kSpeedSteps
@@ -30,7 +34,7 @@ struct Settings {
     bool zoom2 = true;          // map drawn at 2x (64 px cells); false = 1x
 
     double tick_seconds() const;
-    std::string speed_label() const;  // "x1", "x0.75", ...
+    std::string speed_label() const;  // "x1", "x0.75", ..., "x4"
 };
 
 struct PlayerSlot {
