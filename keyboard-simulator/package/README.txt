@@ -1,4 +1,4 @@
-KEYBOARD SIMULATOR 1.0
+KEYBOARD SIMULATOR 2.0
 ======================
 
 A touch-typing trainer for the Russian (ЙЦУКЕН) layout. A remake of the 2007 thesis

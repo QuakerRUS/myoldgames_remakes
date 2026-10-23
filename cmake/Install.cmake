@@ -3,9 +3,9 @@
 #
 #   dist/Soldier 2.0/              soldier.exe, soldier_editor.exe, painter.exe, SDL3.dll, data/,
 #                                  README.txt, PAINTER.txt
-#   dist/Piton 1.0/                piton.exe, piton_editor.exe, painter.exe, SDL3.dll, data/,
+#   dist/Piton 2.0/                piton.exe, piton_editor.exe, painter.exe, SDL3.dll, data/,
 #                                  README.txt, PAINTER.txt
-#   dist/Keyboard Simulator 1.0/   keyboard_simulator.exe, SDL3.dll, data/, README.txt
+#   dist/Keyboard Simulator 2.0/   keyboard_simulator.exe, SDL3.dll, data/, README.txt
 #
 # Painter, the graphics editor shared by Soldier and Piton, ships with both games.
 #
@@ -63,8 +63,8 @@ function(vs_install_tools folder package readme readme_name)
 endfunction()
 
 set(VS_SOLDIER_PACKAGE "Soldier 2.0")
-set(VS_PITON_PACKAGE "Piton 1.0")
-set(VS_KBSIM_PACKAGE "Keyboard Simulator 1.0")
+set(VS_PITON_PACKAGE "Piton 2.0")
+set(VS_KBSIM_PACKAGE "Keyboard Simulator 2.0")
 
 # The release starts with an empty player list: the built-in player LISIY (players.json) and his
 # demo records stay in the repository for --verify-replays and --autoplay-record.

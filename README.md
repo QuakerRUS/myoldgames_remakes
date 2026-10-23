@@ -110,8 +110,8 @@ folder. Every folder is self-contained (the exes, `SDL3.dll`, the Visual C++ run
 ```
 dist/
 ├─ Soldier 2.0/              Soldier 2.0.zip               (+ painter.exe)
-├─ Piton 1.0/                Piton 1.0.zip                 (+ painter.exe)
-└─ Keyboard Simulator 1.0/   Keyboard Simulator 1.0.zip
+├─ Piton 2.0/                Piton 2.0.zip                 (+ painter.exe)
+└─ Keyboard Simulator 2.0/   Keyboard Simulator 2.0.zip
 ```
 
 The folder and archive names carry the game and its version (`cmake/Install.cmake`). Painter,

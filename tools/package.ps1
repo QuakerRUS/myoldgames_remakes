@@ -5,8 +5,8 @@
 .DESCRIPTION
   Result:
     dist\Soldier 2.0\              dist\Soldier 2.0.zip
-    dist\Piton 1.0\                dist\Piton 1.0.zip
-    dist\Keyboard Simulator 1.0\   dist\Keyboard Simulator 1.0.zip
+    dist\Piton 2.0\                dist\Piton 2.0.zip
+    dist\Keyboard Simulator 2.0\   dist\Keyboard Simulator 2.0.zip
   Each folder is self-contained (exe, SDL3.dll, the Visual C++ runtime DLLs, data\, README.txt);
   the Soldier and Piton folders also hold painter.exe, the shared graphics editor.
 

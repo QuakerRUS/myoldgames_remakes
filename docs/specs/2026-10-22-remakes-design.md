@@ -106,7 +106,7 @@ Test executables (and the engine demo) stay in `bin/<Config>/`. Assets are looke
 `<exe_dir>/data` first; the source-tree data folder is a development fallback.
 
 `cmake --install build/vs2022 --config Release --prefix dist` produces `dist/Soldier 2.0/`,
-`dist/Piton 1.0/` and `dist/Keyboard Simulator 1.0/` (game and version in the name), each
+`dist/Piton 2.0/` and `dist/Keyboard Simulator 2.0/` (game and version in the name), each
 self-contained (with the Visual C++ runtime DLLs) and with a `README.txt`; Painter ships with
 Soldier and Piton. `tools/package.ps1` builds Release, installs
 and zips each folder into `dist/*.zip`.

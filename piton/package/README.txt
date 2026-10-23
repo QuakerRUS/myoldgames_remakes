@@ -1,4 +1,4 @@
-PITON 1.0
+PITON 2.0
 =========
 
 A snake game: eat 50 rabbits on each of the 10 levels without hitting a wall or yourself.
