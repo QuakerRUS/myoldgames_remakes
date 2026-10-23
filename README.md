@@ -5,6 +5,9 @@ Windows: the QBasic games Soldier and Piton (2000) and the 2007 thesis program, 
 simulator. The presentation is redone; the functionality and the levels keep their original
 content. The originals are kept byte-for-byte in [`archive/`](archive/README.md).
 
+All three remakes were made in about 2.5 hours in total with
+[Claude Code](https://claude.com/claude-code).
+
 ## Projects
 
 | Project | Original | Remake | Status |
