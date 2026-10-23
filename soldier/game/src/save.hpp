@@ -17,10 +17,10 @@ inline constexpr int kSlotCount = 10;
 inline constexpr int kLevelCount = 51;
 inline constexpr int kNameLength = 8;
 
-// GAME SPEED steps; x1 (index 2) = 500 ms per tick.
+// GAME SPEED steps; x1 (index 2) = 250 ms per tick, the pace of the original.
 inline constexpr std::array<double, 5> kSpeedSteps{0.5, 0.75, 1.0, 1.5, 2.0};
 inline constexpr int kDefaultSpeed = 2;
-inline constexpr double kBaseTickSeconds = 0.5;
+inline constexpr double kBaseTickSeconds = 0.25;
 
 struct Settings {
     int speed = kDefaultSpeed;  // index into kSpeedSteps

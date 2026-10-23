@@ -4,11 +4,11 @@
 
 .DESCRIPTION
   Result:
-    dist\Soldier 2.0\          dist\Soldier 2.0.zip
-    dist\Piton\                dist\Piton.zip
-    dist\Keyboard Simulator\   dist\Keyboard Simulator.zip
-    dist\Painter\              dist\Painter.zip
-  Each folder is self-contained (exe, SDL3.dll, the Visual C++ runtime DLLs, data\, README.txt).
+    dist\Soldier 2.0\              dist\Soldier 2.0.zip
+    dist\Piton 1.0\                dist\Piton 1.0.zip
+    dist\Keyboard Simulator 1.0\   dist\Keyboard Simulator 1.0.zip
+  Each folder is self-contained (exe, SDL3.dll, the Visual C++ runtime DLLs, data\, README.txt);
+  the Soldier and Piton folders also hold painter.exe, the shared graphics editor.
 
 .PARAMETER SkipBuild
   Do not configure and build; install what build\vs2022 already contains.

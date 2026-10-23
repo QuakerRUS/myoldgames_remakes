@@ -1,10 +1,13 @@
 # Packaging: `cmake --install build/vs2022 --config Release --prefix dist` produces one
-# self-contained folder per program (see tools/package.ps1 for the zips):
+# self-contained folder per game, named "<game> <version>" (see tools/package.ps1 for the zips):
 #
-#   dist/Soldier 2.0/          soldier.exe, soldier_editor.exe, SDL3.dll, data/, README.txt
-#   dist/Piton/                piton.exe, piton_editor.exe, SDL3.dll, data/, README.txt
-#   dist/Keyboard Simulator/   keyboard_simulator.exe, SDL3.dll, data/, README.txt
-#   dist/Painter/              painter.exe, SDL3.dll, README.txt
+#   dist/Soldier 2.0/              soldier.exe, soldier_editor.exe, painter.exe, SDL3.dll, data/,
+#                                  README.txt, PAINTER.txt
+#   dist/Piton 1.0/                piton.exe, piton_editor.exe, painter.exe, SDL3.dll, data/,
+#                                  README.txt, PAINTER.txt
+#   dist/Keyboard Simulator 1.0/   keyboard_simulator.exe, SDL3.dll, data/, README.txt
+#
+# Painter, the graphics editor shared by Soldier and Piton, ships with both games.
 #
 # Each folder also gets the Visual C++ runtime DLLs (app-local deployment), so the programs run
 # on a Windows PC without the Visual C++ Redistributable.
@@ -40,7 +43,24 @@ function(vs_install_folder folder package readme)
   install(FILES "${readme}" DESTINATION "${package}" RENAME README.txt)
 endfunction()
 
-vs_install_folder(Soldier "Soldier 2.0" ${CMAKE_SOURCE_DIR}/soldier/package/README.txt)
-vs_install_folder(Piton "Piton" ${CMAKE_SOURCE_DIR}/piton/package/README.txt)
-vs_install_folder(KeyboardSimulator "Keyboard Simulator" ${CMAKE_SOURCE_DIR}/keyboard-simulator/package/README.txt)
-vs_install_folder(Painter "Painter" ${CMAKE_SOURCE_DIR}/tools/painter/package/README.txt)
+# vs_install_tools(<output folder> <package folder> <readme.txt> <readme name>): adds the programs
+# of another output folder (no data of their own) and their README to a package folder that
+# vs_install_folder already filled.
+function(vs_install_tools folder package readme readme_name)
+  get_property(targets GLOBAL PROPERTY VS_FOLDER_TARGETS_${folder})
+  if(NOT targets)
+    return()
+  endif()
+  install(TARGETS ${targets} RUNTIME DESTINATION "${package}")
+  install(FILES "${readme}" DESTINATION "${package}" RENAME "${readme_name}")
+endfunction()
+
+set(VS_SOLDIER_PACKAGE "Soldier 2.0")
+set(VS_PITON_PACKAGE "Piton 1.0")
+set(VS_KBSIM_PACKAGE "Keyboard Simulator 1.0")
+
+vs_install_folder(Soldier "${VS_SOLDIER_PACKAGE}" ${CMAKE_SOURCE_DIR}/soldier/package/README.txt)
+vs_install_folder(Piton "${VS_PITON_PACKAGE}" ${CMAKE_SOURCE_DIR}/piton/package/README.txt)
+vs_install_folder(KeyboardSimulator "${VS_KBSIM_PACKAGE}" ${CMAKE_SOURCE_DIR}/keyboard-simulator/package/README.txt)
+vs_install_tools(Painter "${VS_SOLDIER_PACKAGE}" ${CMAKE_SOURCE_DIR}/tools/painter/package/README.txt PAINTER.txt)
+vs_install_tools(Painter "${VS_PITON_PACKAGE}" ${CMAKE_SOURCE_DIR}/tools/painter/package/README.txt PAINTER.txt)

@@ -64,10 +64,12 @@ other's copies:
   defines its data; later calls name the same `<data_dir>` and may omit `EXTRA`.
 
 Packaging (`cmake/Install.cmake`): `cmake --install build/vs2022 --config Release --prefix dist`
-installs every folder as a self-contained package (`dist/Soldier 2.0/`, `dist/Piton/`,
-`dist/Keyboard Simulator/`, `dist/Painter/`: the exes, `SDL3.dll`, the Visual C++ runtime DLLs,
-`data/` and the `<project>/package/README.txt`); `tools/package.ps1` builds Release, installs and
-zips each folder. `vs_install_folder(<folder> <package> <readme>)` adds a package.
+installs every game as a self-contained package named after the game and its version
+(`dist/Soldier 2.0/`, `dist/Piton 1.0/`, `dist/Keyboard Simulator 1.0/`: the exes, `SDL3.dll`, the
+Visual C++ runtime DLLs, `data/` and the `<project>/package/README.txt`); `tools/package.ps1`
+builds Release, installs and zips each folder. `vs_install_folder(<folder> <package> <readme>)`
+adds a package; `vs_install_tools(<folder> <package> <readme> <name>)` adds the programs of
+another output folder to it (Painter goes into the Soldier and Piton packages).
 
 A doctest main file is one line pair:
 ```cpp

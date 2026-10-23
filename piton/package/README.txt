@@ -1,10 +1,11 @@
-PITON
-=====
+PITON 1.0
+=========
 
 A snake game: eat 50 rabbits on each of the 10 levels without hitting a wall or yourself.
 A remake and completion of Piton (QBasic, 2000).
 
-Run piton.exe. The map editor is piton_editor.exe.
+Run piton.exe. The map editor is piton_editor.exe, the graphics editor is painter.exe
+(see PAINTER.txt).
 
 GAME CONTROLS
   Arrows / W A S D  change the direction (no 180-degree turn)

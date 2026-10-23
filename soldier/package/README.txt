@@ -5,7 +5,8 @@ A puzzle game: lead the soldier through 51 levels of walls, boxes, buttons, door
 coloured keys, guillotines and water to the exit. A remake of Soldier 1.1 (QBasic, 2000):
 the levels and the rules are the original ones, the presentation is new.
 
-Run soldier.exe. The map editor is soldier_editor.exe.
+Run soldier.exe. The map editor is soldier_editor.exe, the graphics editor is painter.exe
+(see PAINTER.txt).
 
 GAME CONTROLS
   Arrows            step / turn

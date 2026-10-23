@@ -136,8 +136,11 @@ key icons are 32×32 → offset 4), `cursor_0..3` (44×44 corner brackets for th
   `head_<d>_dead` (d = direction the head faces/moves), `body_h`, `body_v`, `turn_ne`, `turn_nw`, `turn_se`,
   `turn_sw` (connects the two named edges), `tail_<d>` (d = direction the tip points, away from the body; a snake
   moving right uses `tail_l`). Anims: `head_<d>` (tongue flick, loop), `head_eat_<d>` (once), `head_dead_<d>`.
-  Body 16 px wide, centred; pattern repeats every 12 px so pieces join at cell edges. Smooth motion: draw the
-  straight body piece clipped behind the interpolated head.
+  Body 16 px wide, centred; pattern repeats every 12 px so pieces join at cell edges. Crawl phases
+  `body_h_p<k>`, `body_v_p<k>`, `turn_<ab>_p<k>` (k = 1..11; phase 0 is the plain name): the skin moved k px
+  along the piece (right / down for straight pieces, from the first named edge to the second for turns), so
+  the markings crawl through every cell with the snake, as the original's HOR1-4 / VER1-4 / RU1-4 frames
+  were meant to. Smooth motion: draw the straight body piece clipped behind the interpolated head.
 - `rabbit.png/.json`: `rabbit_sit`, `rabbit_nose`, `rabbit_look`, `rabbit_ears`, `rabbit_hop1`, `rabbit_hop2`;
   anims `rabbit_idle` (loop) and `rabbit_hop` (once).
 - `ui.png/.json`: `panel` (24×24 9-slice, border 8, wooden frame), `icon_rabbit` (22×22), `icon_star` (16×16).

@@ -88,7 +88,7 @@ tick — invisible in every original record.
 
 The timer: `timer()` starts at `Level::time_limit` (or −1 when there is no limit), decreases by 1
 at ticks 4, 8, 12, …, and the player dies at the first second boundary at which it is already 0:
-at tick `4 × (time_limit + 1)`. With 500 ms ticks a timer unit lasts 2 s.
+at tick `4 × (time_limit + 1)`. With the default 250 ms ticks a timer unit lasts 1 s.
 
 ## `Game`
 

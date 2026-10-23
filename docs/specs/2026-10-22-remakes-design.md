@@ -106,8 +106,9 @@ Test executables (and the engine demo) stay in `bin/<Config>/`. Assets are looke
 `<exe_dir>/data` first; the source-tree data folder is a development fallback.
 
 `cmake --install build/vs2022 --config Release --prefix dist` produces `dist/Soldier 2.0/`,
-`dist/Piton/`, `dist/Keyboard Simulator/` and `dist/Painter/`, each self-contained (with the
-Visual C++ runtime DLLs) and with a `README.txt`. `tools/package.ps1` builds Release, installs
+`dist/Piton 1.0/` and `dist/Keyboard Simulator 1.0/` (game and version in the name), each
+self-contained (with the Visual C++ runtime DLLs) and with a `README.txt`; Painter ships with
+Soldier and Piton. `tools/package.ps1` builds Release, installs
 and zips each folder into `dist/*.zip`.
 
 Saves and settings: `%APPDATA%\V Software\<game>`.
@@ -172,12 +173,12 @@ tests (doctest).
 - The rhythm is kept in ticks: a game "second" is 4 ticks, a step takes 2 ticks, the
   guillotine is closed on the 4th tick of the "second", the level timer decreases once
   every 4 ticks. This is needed for the timing puzzles and for replaying the old demos.
-- The pace is twice as slow as the original's "real second": tick 500 ms, step 1 s.
+- The default pace is the original's "real second": tick 250 ms, step 0.5 s.
   The timer shows the original numbers (300, 120, 36, 15) and, as in the original,
-  decreases by one every 4 ticks — at ×1 that is 2 real seconds, so the limit is doubled.
+  decreases by one every 4 ticks — at ×1 that is 1 real second.
 - Game speed is the GAME SPEED setting in OPTIONS: 5 steps ×0.5, ×0.75, **×1 (default,
-  tick 500 ms)**, ×1.5, ×2. Only the tick length changes; all logic and the timer run in
-  ticks, so the timer numbers do not depend on the speed (×2 is the original pace),
+  tick 250 ms)**, ×1.5, ×2 (tick 500 … 125 ms). Only the tick length changes; all logic and
+  the timer run in ticks, so the timer numbers do not depend on the speed (×1 is the original pace),
   and neither do the recordings.
 - Bugs of the original are fixed (none of them affects the 51 LISIY demos):
   - pushing a box to the right checked the wrong cell for a sunk box (`ml(absx - 2, absy)`
@@ -293,7 +294,9 @@ high_score=<n>
 ### Presentation
 
 - An animated snake: the head in several phases per direction, body, turns, tail — after
-  the original sprite set, at the new resolution. An animated rabbit. New grass and
+  the original sprite set, at the new resolution. As the original's many sprites intended,
+  every segment shows the crawl: the skin markings move through each body and turn cell
+  together with the head and tail. An animated rabbit. New grass and
   brick textures.
 - Sounds (eating, turning, death, level complete, menu), music (menu, game, victory).
 - The same company intro, then "PITON".

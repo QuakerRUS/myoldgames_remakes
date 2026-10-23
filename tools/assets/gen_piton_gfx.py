@@ -138,6 +138,10 @@ def arc_pts(cx, cy, r, th0, th1, s0, s1, n=24):
 
 BODY_R = 8.0
 PERIOD = 12.0
+# Crawl phases of the body pieces: phase k shows the skin pattern moved k px along the piece
+# (towards growing s), so the markings travel with the snake inside every cell, as the
+# HOR1-4 / VER1-4 / RU1-4 ... frames of the 2000 original were meant to.
+SKIN_PHASES = 12
 
 
 def body_pattern(s, lat, R):
@@ -219,17 +223,17 @@ def crop(img):
     return img.crop((O, O, O + C, O + C))
 
 
-def piece_straight(horizontal):
+def piece_straight(horizontal, phase=0):
     L = Layer(CAN, CAN)
     if horizontal:
-        L.add_tube([(-24, 24), (72, 24)], [-36, 60])
+        L.add_tube([(-24, 24), (72, 24)], [-36 - phase, 60 - phase])
     else:
-        L.add_tube([(24, -24), (24, 72)], [-36, 60])
+        L.add_tube([(24, -24), (24, 72)], [-36 - phase, 60 - phase])
     return crop(L.colours())
 
 
-def piece_turn(a, b):
-    """Turn joining edges a and b (n/e/s/w)."""
+def piece_turn(a, b, phase=0):
+    """Turn joining edges a and b (n/e/s/w); s grows from a to b."""
     L = Layer(CAN, CAN)
     ax, ay = EDGE_MID[a]
     bx, by = EDGE_MID[b]
@@ -246,7 +250,7 @@ def piece_turn(a, b):
     va, vb = OUTV[a], OUTV[b]
     pre = [(ax + va[0] * 36, ay + va[1] * 36)]
     post = [(bx + vb[0] * 36, by + vb[1] * 36)]
-    L.add_tube(pre + pts + post, [-36] + ss + [60])
+    L.add_tube(pre + pts + post, [v - phase for v in [-36] + ss + [60]])
     return crop(L.colours())
 
 
@@ -957,6 +961,11 @@ def build():
     s.add("body_v", piece_straight(False))
     for name, (a, b) in TURNS.items():
         s.add(name, piece_turn(a, b))
+    for k in range(1, SKIN_PHASES):
+        s.add(f"body_h_p{k}", piece_straight(True, k))
+        s.add(f"body_v_p{k}", piece_straight(False, k))
+        for name, (a, b) in TURNS.items():
+            s.add(f"{name}_p{k}", piece_turn(a, b, k))
     for d in "udlr":
         s.add(f"tail_{d}", piece_tail(d))
     for d in "udlr":
