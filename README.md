@@ -19,7 +19,8 @@ content. The originals are kept byte-for-byte in [`archive/`](archive/README.md)
 A tile puzzle: lead the soldier to the exit past walls, boxes, buttons and doors, coloured keys
 and doors, guillotines and water. The 51 levels and the rules of Soldier 1.1 (an exact port,
 with the original's bugs fixed), new pixel art, animations, sounds and music, 10 player slots,
-records of the best runs and their replays, the built-in player LISIY with his demos.
+records of the best runs and their replays, the built-in player LISIY with his demos (in the
+repository and development builds; the release package starts with no players).
 
 Controls: arrows step / turn, `,` `.` turn, Tab next key in the inventory, Space / Enter use the
 key, Esc give up, P pause, Z zoom 2× / 1× (2× by default), F11 / Alt+Enter fullscreen.

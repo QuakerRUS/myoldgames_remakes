@@ -16,10 +16,17 @@ set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP TRUE)
 set(CMAKE_INSTALL_UCRT_LIBRARIES FALSE)
 include(InstallRequiredSystemLibraries)
 
-# vs_install_folder(<output folder> <package folder> <readme.txt>): installs every program built
-# into bin/<Config>/<output folder> (see vs_set_output_folder), SDL3.dll, the folder's data
-# (vs_add_game_data, including its EXTRA directories) and the README into <prefix>/<package folder>.
+# vs_install_folder(<output folder> <package folder> <readme.txt> [EXCLUDE <name>...]): installs
+# every program built into bin/<Config>/<output folder> (see vs_set_output_folder), SDL3.dll, the
+# folder's data (vs_add_game_data, including its EXTRA directories) and the README into
+# <prefix>/<package folder>. EXCLUDE leaves the data files or directories of those names out of
+# the package (they stay in the development builds).
 function(vs_install_folder folder package readme)
+  cmake_parse_arguments(PARSE_ARGV 3 ARG "" "" "EXCLUDE")
+  set(excludes)
+  foreach(name IN LISTS ARG_EXCLUDE)
+    list(APPEND excludes PATTERN "${name}" EXCLUDE)
+  endforeach()
   get_property(targets GLOBAL PROPERTY VS_FOLDER_TARGETS_${folder})
   if(NOT targets)
     return()
@@ -31,7 +38,7 @@ function(vs_install_folder folder package readme)
   endif()
   get_property(data GLOBAL PROPERTY VS_FOLDER_DATA_${folder})
   if(data)
-    install(DIRECTORY "${data}/" DESTINATION "${package}/data")
+    install(DIRECTORY "${data}/" DESTINATION "${package}/data" ${excludes})
   endif()
   get_property(extras GLOBAL PROPERTY VS_FOLDER_EXTRA_DIRS_${folder})
   foreach(entry IN LISTS extras)
@@ -59,7 +66,10 @@ set(VS_SOLDIER_PACKAGE "Soldier 2.0")
 set(VS_PITON_PACKAGE "Piton 1.0")
 set(VS_KBSIM_PACKAGE "Keyboard Simulator 1.0")
 
-vs_install_folder(Soldier "${VS_SOLDIER_PACKAGE}" ${CMAKE_SOURCE_DIR}/soldier/package/README.txt)
+# The release starts with an empty player list: the built-in player LISIY (players.json) and his
+# demo records stay in the repository for --verify-replays and --autoplay-record.
+vs_install_folder(Soldier "${VS_SOLDIER_PACKAGE}" ${CMAKE_SOURCE_DIR}/soldier/package/README.txt
+                  EXCLUDE players.json records)
 vs_install_folder(Piton "${VS_PITON_PACKAGE}" ${CMAKE_SOURCE_DIR}/piton/package/README.txt)
 vs_install_folder(KeyboardSimulator "${VS_KBSIM_PACKAGE}" ${CMAKE_SOURCE_DIR}/keyboard-simulator/package/README.txt)
 vs_install_tools(Painter "${VS_SOLDIER_PACKAGE}" ${CMAKE_SOURCE_DIR}/tools/painter/package/README.txt PAINTER.txt)

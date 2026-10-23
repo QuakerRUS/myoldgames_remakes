@@ -229,7 +229,9 @@ tests (doctest).
   for the level if there is none yet or it is shorter. Replay: speed ×1/×2/×4 (keys 1, 2, 4,
   Tab cycles), Z zoom, any other key exits.
 - The built-in player LISIY (all 51 levels completed) with his `REC0*.DAT` records
-  (converted from the old format). Taras's demos and save are not carried over.
+  (converted from the old format). Taras's demos and save are not carried over. The release
+  package leaves LISIY out (no `players.json`, no `records/`): a new install starts with no
+  players; the repository and development builds keep him for `--verify-replays`.
   After level 51 — "YOU WIN!".
 
 ### Data import
