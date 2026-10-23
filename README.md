@@ -1,6 +1,6 @@
 # Remakes — Soldier, Piton, Keyboard Simulator
 
-Remakes of three old projects (V Software Entertainment) for modern
+Remakes of three old projects for modern
 Windows: the QBasic games Soldier and Piton (2000) and the 2007 thesis program, a touch-typing
 simulator. The presentation is redone; the functionality and the levels keep their original
 content. The originals are kept byte-for-byte in [`archive/`](archive/README.md).
@@ -129,7 +129,7 @@ remakes/
 │  └─ dosbox/                    DOSBox configs to run the originals
 ├─ engine/                       vs_engine (app, gfx, text, audio, input, ui, storage),
 │                                vs_imgui, vs_editor (tile map editor base), tests
-├─ shared/branding/              V Software Entertainment logo art (company intro)
+├─ shared/branding/              company logo art (intro)
 ├─ soldier/{core,game,editor,data,package}/
 ├─ piton/{core,game,editor,data,package}/
 ├─ keyboard-simulator/{core,app,data,package}/
