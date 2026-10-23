@@ -1,6 +1,6 @@
 # Remakes — Soldier, Piton, Keyboard Simulator
 
-Remakes of three old projects by Fedoseyenko Victor (V Software Entertainment) for modern
+Remakes of three old projects (V Software Entertainment) for modern
 Windows: the QBasic games Soldier and Piton (2000) and the 2007 thesis program, a touch-typing
 simulator. The presentation is redone; the functionality and the levels keep their original
 content. The originals are kept byte-for-byte in [`archive/`](archive/README.md).
@@ -158,5 +158,3 @@ See [`archive/dosbox/README.md`](archive/dosbox/README.md).
 - File formats: [`docs/formats/`](docs/formats/)
 - Assets and their sources: [`docs/assets.md`](docs/assets.md)
 - Engine: [`engine/README.md`](engine/README.md)
-
-Credits: V Software Entertainment — Program by Fedoseyenko Victor — Russia, Moscow, 2026.
