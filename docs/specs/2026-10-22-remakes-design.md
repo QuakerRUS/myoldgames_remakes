@@ -11,7 +11,7 @@ originals is in [`docs/originals-review.md`](../originals-review.md).
 ## Goal
 
 Remake three old projects for Windows and keep them, together with the originals,
-in one private repository `QuakerRUS/myoldgames_remakes`.
+in one public repository `QuakerRUS/myoldgames_remakes`.
 
 Guiding principle: **the presentation is far better than the original, while the
 functionality and the levels keep their original content.** Every caption and logo that
